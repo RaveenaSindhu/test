@@ -1,0 +1,8 @@
+cd source
+bower uninstall irf-elements
+bower install
+npm install
+gulp clean
+gulp clean
+sed -i 's/\("ams_enabled"\).*/\1: '$AMS_Enabled'/' dev-www/app_manifest.json
+gulp build --siteCode=kinara
